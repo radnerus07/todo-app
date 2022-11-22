@@ -1,11 +1,12 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: 'index.js',
+    entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, './dist'),
-      filename: 'index_bundle.js',
+      filename: 'main.js',
     },
     mode:'development',
     module: {
