@@ -16,7 +16,6 @@ module.exports = {
                 use: [
                     {
                         loader: "html-loader",
-                        // options: { minimize: true}
                     }
                 ]
             },
@@ -26,7 +25,6 @@ module.exports = {
                     "style-loader",
                     "css-loader",
                     "sass-loader"
-
                 ]
             },
         ]
