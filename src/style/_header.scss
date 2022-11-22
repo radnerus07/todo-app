@@ -1,0 +1,38 @@
+
+.header{
+      background-color: $primary-color;
+      height: auto;
+      min-height: 100vh;
+
+    &__title {
+        color: $text-color-general;
+        text-align: center;
+        padding: 20px 0 80px;
+    }
+
+    &__input {
+        width: 50%;
+        height: 40px;
+    }
+}
+
+input {
+    outline: none;
+    box-shadow: none;
+    border:2px solid ; 
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: transparent;
+    padding: 0 10px;
+    color: $text-color-general;
+
+    &:focus {
+        border: solid $button-color;
+    }
+
+    &::placeholder {
+        color: $text-color-light;
+        font-size: 15px;
+       
+    }
+}

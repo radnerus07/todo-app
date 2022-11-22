@@ -1,0 +1,19 @@
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name );
+  }
+  
+$font-varient:  "Rubik", sans-serif;
+$primary-color:  #95abfa;
+$text-color: #32325c;
+$text-color-light:  #5b6c94;
+$text-color-general: #ffffff;
+$background-color: #1fdb84;
+$background-color-dark:  #121110ed;
+$button-color: #00a400;
+$border-color: #0a8aff;
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+)

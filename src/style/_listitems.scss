@@ -1,0 +1,41 @@
+
+.list-items {
+    text-align: center;
+    float: left;
+    width: 50%;
+     &__heading {
+        padding-bottom: 30px;
+     }
+     &__todo{
+        
+        display: inline-block;
+     }
+     &__todo li {
+        padding: 10px;
+        width: 30%;
+        min-width: 320px;
+        margin-bottom: 10px;
+        background-color: $text-color-general;
+        color: $primary-color;
+        border-radius: 20px;
+    
+     }
+     &__input {
+        height: 40px;
+        width: 250px;
+        color:$background-color-dark;
+
+     }
+     &__btn {
+        height: 40px;
+        width: 60px;
+        background-color: $text-color-general;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+     }
+    
+}
+
+.active-class {
+    font-weight: weight(bold);
+}

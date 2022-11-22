@@ -1,0 +1,117 @@
+
+.todo-list {
+    float: left;
+    width: 50%;
+    text-align: center;
+    
+    &__header {
+        padding: 20px;
+        max-width: 400px;
+        background-color: $text-color;
+        border-bottom: 2px solid $text-color-general;
+    }
+    &__title{
+      text-transform: uppercase;
+      padding-bottom: 30px;
+      display: inline;
+    }
+    &__counts{
+      float: right;
+    }
+    
+}
+
+.todo-body {
+
+    padding: 20px 10px;
+    background-color: $text-color;
+    max-width: 400px;
+    &__tasks{
+       padding-bottom: 20px;
+      
+    }
+    &__task {
+        padding: 10px;
+        height: 40px;
+        min-width: 320px;
+        margin-bottom: 10px;
+        background-color: $text-color-general;
+        color: $background-color-dark;
+        border-radius: 20px;
+        text-align: left;
+    }
+}
+
+[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+
+
+.todo-body__task:hover .checkbox,
+[type="checkbox"]:focus + label .checkbox {
+    transform: scale(1.2);
+    color: $background-color-dark;
+}
+
+[type="checkbox"]:checked + label .checkbox {
+    background: $background-color-dark;
+    border-color: $background-color-dark;
+    box-shadow: inset 0 0 0 2px white;
+}
+  
+.todo-create{
+
+    &__input {
+        width: 250px;
+        height: 40px;
+    }
+    &__btn {
+        height: 40px;
+        width: 60px;
+        background-color: $text-color-general;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+
+
+
+.todo-delete{
+    margin-top: 10px;
+    &__clear {
+        margin-right: 20px;
+        padding: 5px;
+        background-color: $text-color-general;
+        color: $background-color-dark;
+        border-radius: 20px;
+    }
+    &__delete {
+        margin-right: 10px;
+        margin-top: 10px;
+        padding: 5px;
+        background-color: $text-color-general;
+        color: $background-color-dark;
+        border-radius: 20px;
+    }
+    &__update {
+        padding: 5px;
+        background-color: $text-color-general;
+        color: $background-color-dark;
+        border-radius: 20px;
+    }
+    
+}
