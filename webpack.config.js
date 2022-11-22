@@ -2,19 +2,23 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+    entry: 'index.js',
+    output: {
+      path: path.resolve(__dirname, './dist'),
+      filename: 'index_bundle.js',
+    },
     mode:'development',
     module: {
         
         rules: [
             {
                 test: /\.html$/,
-                exclude: [/node_modules/, require.resolve('./index.html')],
-                use: {
-                    loader: 'file-loader',
-                    query: {
-                        name: '[name].[ext]'
-                    },
-                },
+                use: [
+                    {
+                        loader: "html-loader",
+                        // options: { minimize: true}
+                    }
+                ]
             },
             {
                 test: /\.scss$/,
