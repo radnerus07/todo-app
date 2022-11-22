@@ -7,7 +7,6 @@ module.exports = {
     output: {
       path: path.resolve(__dirname, './dist'),
       filename: 'js/main.js',
-      pubilcPath: './dist'
     },
     mode:'development',
     module: {
@@ -16,7 +15,6 @@ module.exports = {
             {
                 test: /\.html$/,
                loader: "html-loader",
-               
             },
             {
                 test: /\.scss$/,
