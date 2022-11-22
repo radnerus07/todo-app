@@ -6,24 +6,20 @@ module.exports = {
     entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, './dist'),
-      filename: 'main.js',
+      filename: 'js/main.js',
     },
     mode:'development',
     module: {
         
         rules: [
             {
-                test: /\.html$/,
-                use: [
-                    {
-                        loader: "html-loader",
-                    }
-                ]
+                test: /\.html$/i,
+               loader: "html-loader",
             },
             {
                 test: /\.scss$/,
                 use: [
-                    "style-loader",
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader"
                 ]
@@ -36,8 +32,7 @@ module.exports = {
             filename: "./index.html"
         }),
         new MiniCssExtractPlugin({
-           filename: "[name].css",
-           chunkFilename:"[id].css"
+            filename: 'main.css'
         }),
     ]
 }
