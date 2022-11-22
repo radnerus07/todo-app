@@ -8,18 +8,13 @@ module.exports = {
         rules: [
             {
                 test: /\.html$/,
-                use: [
-                    {
-                        loader: "html-loader",
-                        // options: { minimize: true}
-                    }
-                ]
-            },
-            {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    'file-loader'
-                ]
+                exclude: [/node_modules/, require.resolve('./index.html')],
+                use: {
+                    loader: 'file-loader',
+                    query: {
+                        name: '[name].[ext]'
+                    },
+                },
             },
             {
                 test: /\.scss$/,
